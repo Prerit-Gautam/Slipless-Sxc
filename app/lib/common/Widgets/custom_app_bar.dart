@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomAppBar extends StatelessWidget {
-  const CustomAppBar({super.key});
+  String text;
+  CustomAppBar({super.key, required this.text});
 
   @override
   Widget build(BuildContext context) {
@@ -9,12 +10,18 @@ class CustomAppBar extends StatelessWidget {
     return Container(
       width: _screenSize.width,
       height: _screenSize.height * 0.12,
-      child: Align(
-        alignment: Alignment.topLeft,
-        child: Padding(
-          padding: const EdgeInsets.all(8.0),
-          child: Image.asset("assets/images/logo.png"),
-        ),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Image.asset("assets/images/logo.png"),
+          ),
+          Padding(
+            padding: const EdgeInsets.all(8.0),
+            child: Text("$text"),
+          )
+        ],
       ),
     );
   }

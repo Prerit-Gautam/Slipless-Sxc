@@ -12,7 +12,9 @@ class LoginPageStackTop extends StatelessWidget {
     final _screenSize = MediaQuery.of(context).size;
     return Column(
       children: [
-        CustomAppBar(),
+        CustomAppBar(
+          text: "",
+        ),
         Container(
           margin: EdgeInsets.symmetric(horizontal: 10, vertical: 5),
           height: _screenSize.height * 0.08,
