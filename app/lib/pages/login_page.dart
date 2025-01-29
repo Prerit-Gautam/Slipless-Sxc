@@ -4,7 +4,6 @@ import 'package:app/common/Widgets/custom_button.dart';
 import 'package:app/common/Widgets/custom_text_field.dart';
 import 'package:app/pages/login_page_stack_top.dart';
 import 'package:flutter/material.dart';
-import 'package:appwrite/models.dart' as models;
 
 class LoginPage extends StatefulWidget {
   @override
@@ -12,7 +11,6 @@ class LoginPage extends StatefulWidget {
 }
 
 class _LoginPageState extends State<LoginPage> {
-  
   @override
   Widget build(BuildContext context) {
     // returns the dimensions of screen

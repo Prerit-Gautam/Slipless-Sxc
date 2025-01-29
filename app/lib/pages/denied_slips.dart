@@ -18,7 +18,7 @@ class _DeniedSlipsState extends State<DeniedSlips> {
       child: Column(
         children: [
           CustomSlip(
-            icon: CustomImages().rejected,
+            icon: CustomImages().reject,
             date: "2081-10-24",
             reason:
                 "Brother went to bring food but didnot return and I cannot leave this house on its own.",

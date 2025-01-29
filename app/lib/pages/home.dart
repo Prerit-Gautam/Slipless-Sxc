@@ -6,7 +6,6 @@ import 'package:app/pages/create_slip.dart';
 import 'package:app/pages/denied_slips.dart';
 import 'package:app/pages/slips.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_floating_bottom_bar/flutter_floating_bottom_bar.dart';
 
 class Home extends StatefulWidget {
   const Home({super.key});
