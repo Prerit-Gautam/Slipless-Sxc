@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "668891255906",
+    "project_id": "slipless-sxc",
+    "storage_bucket": "slipless-sxc.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:668891255906:android:b82a83ef3811857658ed3b",
+        "android_client_info": {
+          "package_name": "com.example.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPTowYe5ijXDN7UU9SaESg3E9UiB3npYk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

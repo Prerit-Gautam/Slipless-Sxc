@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomInputFieldForm extends StatefulWidget {
-  const CustomInputFieldForm({super.key});
+  final TextEditingController controller;
+  const CustomInputFieldForm({super.key, required this.controller});
 
   @override
   State<CustomInputFieldForm> createState() => _CustomInputFieldFormState();
@@ -13,6 +14,7 @@ class _CustomInputFieldFormState extends State<CustomInputFieldForm> {
     return Padding(
       padding: EdgeInsets.all(10),
       child: TextField(
+        controller: widget.controller,
         decoration: InputDecoration(
           filled: true,
           fillColor: Colors.grey[300],
