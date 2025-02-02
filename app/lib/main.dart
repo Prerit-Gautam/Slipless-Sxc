@@ -1,9 +1,20 @@
+import 'package:app/pages/digital_slip.dart';
 import 'package:app/pages/home.dart';
 import 'package:app/pages/login_page.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 import 'package:google_fonts/google_fonts.dart';
 
-void main() {
+User? user = null;
+void main() async {
+  WidgetsFlutterBinding.ensureInitialized();
+  await Firebase.initializeApp(
+    options: DefaultFirebaseOptions.currentPlatform,
+  );
+
+  user = FirebaseAuth.instance.currentUser;
   runApp(App());
 }
 
@@ -16,10 +27,11 @@ class App extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       routes: {
         "/home": (context) => Home(),
-        "/login": (context) => LoginPage()
+        "/login": (context) => LoginPage(),
+        "/digitalSlip": (context) => DigitalSlip()
       },
       theme: ThemeData(textTheme: GoogleFonts.mcLarenTextTheme()),
-      home: LoginPage(),
+      home: (user != null) ? Home() : LoginPage(),
     );
   }
 }

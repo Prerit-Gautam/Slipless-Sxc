@@ -16,7 +16,9 @@ class _FunctionsUtilssState extends State<FunctionsUtilss> {
       child: Row(
         children: [
           IconButton(
-            onPressed: () {},
+            onPressed: () {
+              Navigator.pushNamed(context, "/digitalSlip");
+            },
             icon: Image.asset("assets/images/eye.png"),
           ),
           IconButton(
